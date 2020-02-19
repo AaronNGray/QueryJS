@@ -1,0 +1,380 @@
+src/QueryJS.ts:35:13 - error TS2322: Type 'ParentNode | HTMLElement | null' is not assignable to type 'Element | HTMLElement | HTMLDocument | null'.
+  Type 'ParentNode' is not assignable to type 'Element | HTMLElement | HTMLDocument | null'.
+    Type 'ParentNode' is missing the following properties from type 'HTMLDocument': addEventListener, removeEventListener, URL, activeElement, and 235 more.
+
+35             this.element = element;
+               ~~~~~~~~~~~~
+
+src/QueryJS.ts:41:42 - error TS2345: Argument of type 'Element | HTMLElement | HTMLDocument | null' is not assignable to parameter of type 'ParentNode | HTMLElement | Element | undefined'.
+  Type 'null' is not assignable to type 'ParentNode | HTMLElement | Element | undefined'.
+
+41             return new Element(selector, this.element);
+                                            ~~~~~~~~~~~~
+
+src/QueryJS.ts:45:43 - error TS2345: Argument of type 'Element | HTMLElement | HTMLDocument | null' is not assignable to parameter of type 'Element | HTMLElement | HTMLDocument | Element | undefined'.
+  Type 'null' is not assignable to type 'Element | HTMLElement | HTMLDocument | Element | undefined'.
+
+45             return new Elements(selector, this.element);
+                                             ~~~~~~~~~~~~
+
+src/QueryJS.ts:53:35 - error TS2531: Object is possibly 'null'.
+
+53                 return Array.from((<globalThis.Element>this.element).parentElement.querySelectorAll(selector)).includes(<globalThis.Element>this.element);    // ???
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:114:46 - error TS2322: Type 'undefined' is not assignable to type 'boolean'.
+
+114         toggleClass(classes:string|string[], force:boolean = undefined) {
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:142:13 - error TS2531: Object is possibly 'null'.
+
+142             this.element.addEventListener(event, listener, options);
+                ~~~~~~~~~~~~
+
+src/QueryJS.ts:154:24 - error TS2531: Object is possibly 'null'.
+
+154                 return this.element.addEventListener(event, listener, options);
+                           ~~~~~~~~~~~~
+
+src/QueryJS.ts:158:24 - error TS2531: Object is possibly 'null'.
+
+158                 return this.element.addEventListener(event, (evt: Event):void => {
+                           ~~~~~~~~~~~~
+
+src/QueryJS.ts:159:21 - error TS2531: Object is possibly 'null'.
+
+159                     _this.element.removeEventListener(event, listener, options);
+                        ~~~~~~~~~~~~~
+
+src/QueryJS.ts:170:13 - error TS2531: Object is possibly 'null'.
+
+170             this.element.removeEventListener(event, listener, options);
+                ~~~~~~~~~~~~
+
+src/QueryJS.ts:179:20 - error TS2531: Object is possibly 'null'.
+
+179             return this.element.dispatchEvent(event);
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:189:20 - error TS2531: Object is possibly 'null'.
+
+189             return this.element.addEventListener(event, listener, options);
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:197:20 - error TS2531: Object is possibly 'null'.
+
+197             return this.element.removeEventListener(event, listener, options)
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:205:20 - error TS2531: Object is possibly 'null'.
+
+205             return this.element.dispatchEvent(event);
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:912:13 - error TS2322: Type 'ShadowRoot | null' is not assignable to type 'ShadowRoot'.
+  Type 'null' is not assignable to type 'ShadowRoot'.
+
+912             return (<globalThis.Element>this.element).shadowRoot;
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:971:13 - error TS2322: Type 'Element | null' is not assignable to type 'Element'.
+  Type 'null' is not assignable to type 'Element'.
+
+971             return (<globalThis.Element>this.element).closest(selector)
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1005:13 - error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+
+1005             return (<globalThis.Element>this.element).getAttributeNS(namespace, key);
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1130:13 - error TS2322: Type 'Element | null' is not assignable to type 'Element'.
+  Type 'null' is not assignable to type 'Element'.
+
+1130             return (<globalThis.Element>this.element).insertAdjacentElement(position, element);
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1253:66 - error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+1253                 (<globalThis.Element>this.element).scroll(coord, y);
+                                                                      ~
+
+src/QueryJS.ts:1264:68 - error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+1264                 (<globalThis.Element>this.element).scrollBy(coord, y);
+                                                                        ~
+
+src/QueryJS.ts:1284:68 - error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+1284                 (<globalThis.Element>this.element).scrollTo(coord, y);
+                                                                        ~
+
+src/QueryJS.ts:1475:13 - error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+1475             return (<HTMLElement>this.element).nonce;
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1608:21 - error TS2322: Type 'null' is not assignable to type 'Element[]'.
+
+1608                     selection = null;
+                         ~~~~~~~~~
+
+src/QueryJS.ts:1611:40 - error TS2531: Object is possibly 'null'.
+
+1611                 selection = Array.from(parent.element.querySelectorAll(<string>selector));
+                                            ~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1617:17 - error TS2454: Variable 'selection' is used before being assigned.
+
+1617             if (selection)
+                     ~~~~~~~~~
+
+src/QueryJS.ts:1639:65 - error TS6133: 'index' is declared but its value is never read.
+
+1639             this.selection.forEach((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                     ~~~~~
+
+src/QueryJS.ts:1639:79 - error TS6133: 'array' is declared but its value is never read.
+
+1639             this.selection.forEach((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                                   ~~~~~
+
+src/QueryJS.ts:1646:68 - error TS6133: 'index' is declared but its value is never read.
+
+1646             return this.selection.map((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                        ~~~~~
+
+src/QueryJS.ts:1646:82 - error TS6133: 'array' is declared but its value is never read.
+
+1646             return this.selection.map((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                                      ~~~~~
+
+src/QueryJS.ts:1676:17 - error TS2322: Type '(string | null)[]' is not assignable to type 'string[] | Elements'.
+  Type '(string | null)[]' is not assignable to type 'string[]'.
+    Type 'string | null' is not assignable to type 'string'.
+      Type 'null' is not assignable to type 'string'.
+
+1676                 return (<HTMLElement[]>this.selection).map(function(element:HTMLElement) { return element.getAttribute(name); });
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1819:5 - error TS6133: '$' is declared but its value is never read.
+
+1819 var $ = QueryJS.$;
+         ~
+
+
+Found 31 errors.
+
+
+C:\Users\aaron\Development\web\queryjs>tsc
+src/QueryJS.ts:35:13 - error TS2322: Type 'ParentNode | HTMLElement' is not assignable to type 'Element | HTMLElement | HTMLDocument'.
+  Type 'ParentNode' is not assignable to type 'Element | HTMLElement | HTMLDocument'.
+    Type 'ParentNode' is missing the following properties from type 'HTMLDocument': addEventListener, removeEventListener, URL, activeElement, and 235 more.
+
+35             this.element = element;
+               ~~~~~~~~~~~~
+
+src/QueryJS.ts:1639:65 - error TS6133: 'index' is declared but its value is never read.
+
+1639             this.selection.forEach((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                     ~~~~~
+
+src/QueryJS.ts:1639:79 - error TS6133: 'array' is declared but its value is never read.
+
+1639             this.selection.forEach((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                                   ~~~~~
+
+src/QueryJS.ts:1646:68 - error TS6133: 'index' is declared but its value is never read.
+
+1646             return this.selection.map((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                        ~~~~~
+
+src/QueryJS.ts:1646:82 - error TS6133: 'array' is declared but its value is never read.
+
+1646             return this.selection.map((element:globalThis.Element, index:number, array:globalThis.Element[]) => {
+                                                                                      ~~~~~
+
+src/QueryJS.ts:1819:5 - error TS6133: '$' is declared but its value is never read.
+
+1819 var $ = QueryJS.$;
+         ~
+
+
+Found 6 errors.
+
+
+C:\Users\aaron\Development\web\queryjs>tsc
+src/QueryJS.ts:35:13 - error TS2322: Type 'ParentNode | HTMLElement' is not assignable to type 'Element | HTMLElement | HTMLDocument'.
+  Type 'ParentNode' is not assignable to type 'Element | HTMLElement | HTMLDocument'.
+    Type 'ParentNode' is missing the following properties from type 'HTMLDocument': addEventListener, removeEventListener, URL, activeElement, and 235 more.
+
+35             this.element = element;
+               ~~~~~~~~~~~~
+
+src/QueryJS.ts:1819:5 - error TS6133: '$' is declared but its value is never read.
+
+1819 var $ = QueryJS.$;
+         ~
+
+
+Found 2 errors.
+
+
+C:\Users\aaron\Development\web\queryjs>tsc
+src/QueryJS.ts:35:13 - error TS2322: Type 'ParentNode | HTMLElement' is not assignable to type 'Element | HTMLElement | HTMLDocument'.
+  Type 'ParentNode' is not assignable to type 'Element | HTMLElement | HTMLDocument'.
+    Type 'ParentNode' is missing the following properties from type 'HTMLDocument': addEventListener, removeEventListener, URL, activeElement, and 235 more.
+
+35             this.element = element;
+               ~~~~~~~~~~~~
+
+
+Found 1 error.
+
+
+C:\Users\aaron\Development\web\queryjs>tsc
+
+C:\Users\aaron\Development\web\queryjs>tsc
+src/QueryJS.ts:41:42 - error TS2345: Argument of type 'Element | HTMLElement | HTMLDocument | null' is not assignable to parameter of type 'ParentNode | HTMLElement | Element | undefined'.
+  Type 'null' is not assignable to type 'ParentNode | HTMLElement | Element | undefined'.
+
+41             return new Element(selector, this.element);
+                                            ~~~~~~~~~~~~
+
+src/QueryJS.ts:45:43 - error TS2345: Argument of type 'Element | HTMLElement | HTMLDocument | null' is not assignable to parameter of type 'Element | HTMLElement | HTMLDocument | Element | undefined'.
+  Type 'null' is not assignable to type 'Element | HTMLElement | HTMLDocument | Element | undefined'.
+
+45             return new Elements(selector, this.element);
+                                             ~~~~~~~~~~~~
+
+src/QueryJS.ts:53:35 - error TS2531: Object is possibly 'null'.
+
+53                 return Array.from((<globalThis.Element>this.element).parentElement.querySelectorAll(selector)).includes(<globalThis.Element>this.element);    // ???
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:114:46 - error TS2322: Type 'undefined' is not assignable to type 'boolean'.
+
+114         toggleClass(classes:string|string[], force:boolean = undefined) {
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:142:13 - error TS2531: Object is possibly 'null'.
+
+142             this.element.addEventListener(event, listener, options);
+                ~~~~~~~~~~~~
+
+src/QueryJS.ts:154:24 - error TS2531: Object is possibly 'null'.
+
+154                 return this.element.addEventListener(event, listener, options);
+                           ~~~~~~~~~~~~
+
+src/QueryJS.ts:158:24 - error TS2531: Object is possibly 'null'.
+
+158                 return this.element.addEventListener(event, (evt: Event):void => {
+                           ~~~~~~~~~~~~
+
+src/QueryJS.ts:159:21 - error TS2531: Object is possibly 'null'.
+
+159                     _this.element.removeEventListener(event, listener, options);
+                        ~~~~~~~~~~~~~
+
+src/QueryJS.ts:170:13 - error TS2531: Object is possibly 'null'.
+
+170             this.element.removeEventListener(event, listener, options);
+                ~~~~~~~~~~~~
+
+src/QueryJS.ts:179:20 - error TS2531: Object is possibly 'null'.
+
+179             return this.element.dispatchEvent(event);
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:189:20 - error TS2531: Object is possibly 'null'.
+
+189             return this.element.addEventListener(event, listener, options);
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:197:20 - error TS2531: Object is possibly 'null'.
+
+197             return this.element.removeEventListener(event, listener, options)
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:205:20 - error TS2531: Object is possibly 'null'.
+
+205             return this.element.dispatchEvent(event);
+                       ~~~~~~~~~~~~
+
+src/QueryJS.ts:912:13 - error TS2322: Type 'ShadowRoot | null' is not assignable to type 'ShadowRoot'.
+  Type 'null' is not assignable to type 'ShadowRoot'.
+
+912             return (<globalThis.Element>this.element).shadowRoot;
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:971:13 - error TS2322: Type 'Element | null' is not assignable to type 'Element'.
+  Type 'null' is not assignable to type 'Element'.
+
+971             return (<globalThis.Element>this.element).closest(selector)
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1005:13 - error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+
+1005             return (<globalThis.Element>this.element).getAttributeNS(namespace, key);
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1130:13 - error TS2322: Type 'Element | null' is not assignable to type 'Element'.
+  Type 'null' is not assignable to type 'Element'.
+
+1130             return (<globalThis.Element>this.element).insertAdjacentElement(position, element);
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1253:66 - error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+1253                 (<globalThis.Element>this.element).scroll(coord, y);
+                                                                      ~
+
+src/QueryJS.ts:1264:68 - error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+1264                 (<globalThis.Element>this.element).scrollBy(coord, y);
+                                                                        ~
+
+src/QueryJS.ts:1284:68 - error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+1284                 (<globalThis.Element>this.element).scrollTo(coord, y);
+                                                                        ~
+
+src/QueryJS.ts:1475:13 - error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+1475             return (<HTMLElement>this.element).nonce;
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1608:21 - error TS2322: Type 'null' is not assignable to type 'Element[]'.
+
+1608                     selection = null;
+                         ~~~~~~~~~
+
+src/QueryJS.ts:1611:40 - error TS2531: Object is possibly 'null'.
+
+1611                 selection = Array.from(parent.element.querySelectorAll(<string>selector));
+                                            ~~~~~~~~~~~~~~
+
+src/QueryJS.ts:1617:17 - error TS2454: Variable 'selection' is used before being assigned.
+
+1617             if (selection)
+                     ~~~~~~~~~
+
+src/QueryJS.ts:1676:17 - error TS2322: Type '(string | null)[]' is not assignable to type 'string[] | Elements'.
+  Type '(string | null)[]' is not assignable to type 'string[]'.
+    Type 'string | null' is not assignable to type 'string'.
+      Type 'null' is not assignable to type 'string'.
+
+1676                 return (<HTMLElement[]>this.selection).map(function(element:HTMLElement) { return element.getAttribute(name); });
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
