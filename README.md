@@ -18,11 +18,11 @@ Alpha Release 0.3.1
 
 ## Generate documentation
 
-`npm run docs'
+`npm run docs`
 
-## Git Branches 
+## Git Branches
 
-## master 
+## master
 dependencies in package.json use minimum version
 
 ## baseline
