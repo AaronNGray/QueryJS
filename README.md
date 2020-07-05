@@ -10,7 +10,7 @@ Alpha Release 0.3.1
 
 ## Build
 
-'npm run build'
+`npm run build`
 
 ## Test
 
