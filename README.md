@@ -16,6 +16,10 @@ Alpha Release 0.3.1
 
 `npm test`
 
+## Generate documentation
+
+`npm run docs'
+
 ## Git Branches 
 
 ## master 
